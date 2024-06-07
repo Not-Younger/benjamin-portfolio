@@ -1,0 +1,89 @@
+:root {
+  --main-color: rgb(0, 0, 0);
+  --secondary-color: rgb(255, 69, 69);
+  --main-font-color: rgb(255, 255, 255);
+  --secondary-font-color: rgb(0, 0, 0);
+  --hover-color: rgb(171, 184, 195);
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--main-font-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-font-color);
+  text-transform: uppercase;
+}
+
+#left {
+  background-color: var(--main-color);
+  height: 100%;
+  width: 315px;
+  display: flex;
+  align-items: end;
+  position: fixed;
+}
+
+#right-left {
+  width: 315px;
+}
+
+#right {
+  background-color: white;
+  height: 100%;
+  flex: 3;
+}
+
+#nav-left {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#nav-top {
+  padding: 0 40px;
+}
+
+#name {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  display: block;
+}
+
+#links {
+  list-style-type: none;
+  margin: 0;
+  padding: 32px 0;
+}
+
+#links li {
+  padding: 16px 0;
+  transition: ease 0.2s;
+}
+
+#links li:hover {
+  transform: translateX(10px);
+}
+
+#nav-contact {
+  background-color: var(--secondary-color);
+  width: 100%;
+  text-align: center;
+  padding: 18px 0;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  transition: ease 0.2s;
+}
+
+#nav-contact:hover {
+  color: var(--secondary-font-color);
+  background-color: var(--hover-color);
+}
