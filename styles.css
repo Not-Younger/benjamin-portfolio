@@ -81,7 +81,7 @@ a {
 }
 
 #links li {
-  padding: 16px 0;
+  padding: 20px 0;
   transition: ease 0.2s;
 }
 
@@ -128,17 +128,18 @@ a {
 }
 
 #h1-hero {
-  font-size: 5rem;
-  font-weight: 600;
-  line-height: 1.5;
-  display: block;
+  font-size: 80px;
+  font-weight: 900;
+  display: flex;
+  min-height: 100px;
   margin: 0;
+  color: var(--secondary-color);
+  padding: 10px 0;
 }
 
 #h2-hero{
-  font-size: 1.25rem;
+  font-size: 26px;
   font-weight: 400;
-  line-height: 1.5;
   display: block;
   margin: 0;
 }
@@ -149,4 +150,29 @@ a {
   padding-top: 20px;
   padding-bottom: 3px;
   width: fit-content;
+  transition: ease 0.1s;
+}
+
+#learn:hover {
+  color: var(--main-font-color);
+  border-bottom: 1px solid var(--main-font-color);
+}
+
+.typed-cursor {
+  background-color: var(--main-font-color);
+  display: inline-block;
+  width: 8px;
+  height: 83px;
+  margin-left: 8px;
+}
+
+.typed-cursor.blink {
+  animation: blink .6s linear infinite alternate;
+}
+
+@keyframes blink {
+  0% {opacity: 1;}
+  40% {opacity: 1;}
+  60% {opacity: 0;}
+  100% {opacity: 0;}
 }

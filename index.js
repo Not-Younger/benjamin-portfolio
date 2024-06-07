@@ -16,3 +16,29 @@ document.addEventListener('mousemove', (e) => {
     circle.style.top = `${e.clientY - height/2}px`;
   }, 20);
 });
+
+
+const text = document.getElementById('typed');
+const cursor = document.getElementsByClassName('typed-cursor')[0];
+const skills = ['Photographer', 'Videographer', 'Marketer', 'Drone Pilot'];
+async function changeText() {
+  var i = 0;
+  while (i < 100) {
+    text.innerHTML = '';
+    var index = i % skills.length;
+    for (var j = 0; j < skills[index].length; j++) {
+      text.innerHTML += skills[index][j];
+      await new Promise(r => setTimeout(r, 100));
+    }
+    cursor.classList.add('blink');
+    await new Promise(r => setTimeout(r, 2000));
+    cursor.classList.remove('blink');
+    for (var j = skills[index].length-1; j >= 0; j--) {
+      text.innerHTML = skills[index].slice(0, j);
+      await new Promise(r => setTimeout(r, 70));
+    }
+    i++;
+  }
+}
+
+changeText();
