@@ -21,6 +21,23 @@ a {
   text-transform: uppercase;
 }
 
+#circle {
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--secondary-color);
+  pointer-events: none;
+  position: fixed;
+  top: -10rem;
+  left: -10rem;
+  height: 1rem;
+  width: 1rem;
+  transition: transform 0.4s, background 0.4s;
+}
+
+.big {
+  transform: scale(2);
+}
+
 #left {
   background-color: var(--main-color);
   height: 100%;
