@@ -42,3 +42,6 @@ async function changeText() {
 }
 
 changeText();
+
+const year = new Date().getFullYear();
+document.getElementById('year').innerHTML = year;
