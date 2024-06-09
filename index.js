@@ -46,6 +46,7 @@ changeText();
 const year = new Date().getFullYear();
 document.getElementById('year').innerHTML = year;
 
+const links = document.getElementById('menu');
 const menu = document.getElementById('menu-btn');
 const icon = document.getElementById('icon');
 const bar1 = document.getElementsByClassName('bar1')[0];
@@ -61,6 +62,10 @@ menu.addEventListener('click', () => {
     bar2.classList.add('o2c');
     bar3.classList.remove('o3');
     bar3.classList.add('o3c');
+
+    links.style.display = 'none';
+    links.classList.remove('mo');
+    links.classList.add('mc');
   } else {
     icon.classList.remove('ic');
     icon.classList.add('io');
@@ -70,6 +75,10 @@ menu.addEventListener('click', () => {
     bar2.classList.toggle('o2');
     bar3.classList.remove('o3c');
     bar3.classList.toggle('o3');
+
+    links.style.display = 'flex';
+    links.classList.remove('mc');
+    links.classList.add('mo');
   }
   menu.classList.toggle('open');
 })
