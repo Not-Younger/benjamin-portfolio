@@ -66,7 +66,8 @@ p {
 #right {
   background-color: grey;
   height: 100%;
-  flex: 1
+  flex: 1;
+  position: relative;
 }
 
 #nav-left {
@@ -219,7 +220,6 @@ p {
 
 #content .grid #me {
   grid-row: 1 / span 2;
-  background-color: var(--main-color);
 }
 
 footer {
@@ -237,6 +237,7 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 40px;
+  padding-bottom: 100px;
 }
 
 .footer-container h2 {
@@ -415,4 +416,244 @@ footer {
   padding-bottom: 40px;
 }
 
+#menu-container {
+  position: fixed;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  width: 100vw;
+  display: none;
+}
+
+#menu-btn {
+  background-color: var(--secondary-color);
+  width: 70px;
+  height: 60px;
+  z-index: 100;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#icon {
+  width: min-content;
+  display: flex;
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.bar {
+  background-color: var(--main-font-color);
+  height: 3px;
+  width: 35px;
+  border-radius: 5px;
+  position: absolute;
+  transition: 1s ease;
+}
+
+.bar1 {
+  top: 0px;
+  transition: 1s ease;
+}
+
+.bar2 {
+  transition: 1s ease;
+}
+
+.bar3 {
+  bottom: 0px;
+  transition: 1s ease;
+}
+
+.io {
+  animation: open 0.3s ease;
+}
+
+.ic {
+  animation: close 0.3s ease;
+}
+
+.bar1.o1 {
+  animation: bar1 0.5s ease forwards;
+}
+
+.bar2.o2 {
+  animation: bar2 0.5s ease forwards;
+}
+
+.bar3.o3 {
+  animation: bar3 0.5s ease forwards;
+}
+
+.bar1.o1c {
+  animation: bar1c 0.5s ease forwards;
+}
+
+.bar2.o2c {
+  animation: bar2c 0.5s ease forwards;
+}
+
+.bar3.o3c {
+  animation: bar3c 0.5s ease forwards;
+}
+
+@keyframes open {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(18deg);
+  }
+  20% {
+    transform: rotate(36deg);
+  }
+  30% {
+    transform: rotate(54deg);
+  }
+  40% {
+    transform: rotate(72deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  60% {
+    transform: rotate(108deg);
+  }
+  70% {
+    transform: rotate(126deg);
+  }
+  80% {
+    transform: rotate(144deg);
+  }
+  90% {
+    transform: rotate(162deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes close {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(18deg);
+  }
+  20% {
+    transform: rotate(36deg);
+  }
+  30% {
+    transform: rotate(54deg);
+  }
+  40% {
+    transform: rotate(72deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  60% {
+    transform: rotate(108deg);
+  }
+  70% {
+    transform: rotate(126deg);
+  }
+  80% {
+    transform: rotate(144deg);
+  }
+  90% {
+    transform: rotate(162deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes bar1 {
+  0% {
+    top: auto;
+  }
+  100% {
+    transform: rotate(45deg);
+    top: auto;
+  }
+}
+
+@keyframes bar2 {
+  0% {
+    top: auto;
+  }
+  100% {
+    transform: rotate(-45deg);
+    top: auto;
+  }
+}
+
+@keyframes bar3 {
+  0% {
+    bottom: auto;
+  }
+  100% {
+    transform: rotate(-45deg);
+    bottom: auto;
+  }
+}
+
+@keyframes bar1c {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes bar2c {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    top: auto;
+  }
+}
+
+@keyframes bar3c {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
 /* Media 1200 */
+@media (max-width: 1200px) {
+  #content .grid {
+    display: flex;
+    flex-direction: column;
+  }
+  #content .grid #me {
+    grid-row: auto;
+  }
+  #top-section {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* Meida 1000 */
+@media (max-width: 1000px) {
+  #left, #right-left {
+    display: none;
+  }
+  #menu-container {
+    display: flex;
+  }
+}
+
+/* bug when switching pages and hero typing at same time */
