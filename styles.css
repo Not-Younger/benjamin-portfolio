@@ -7,11 +7,6 @@
   --hover-color: rgb(171, 184, 195);
 }
 
-html {
-  scroll-behavior: smooth;
-  overflow: hidden;
-}
-
 body {
   display: flex;
   height: 100vh;
@@ -19,7 +14,6 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   color: var(--main-font-color);
-  overflow-x: hidden;
 }
 
 a {
@@ -66,6 +60,7 @@ p {
 #right {
   background-color: grey;
   height: 100%;
+  width: 100%;
   flex: 1;
   position: relative;
 }
@@ -133,6 +128,7 @@ p {
   display: flex;
   flex-direction: column;
   padding: 0 2.5rem;
+  width: 100%;
 }
 
 #location {
@@ -147,6 +143,7 @@ p {
   font-size: 5rem;
   font-weight: 900;
   display: flex;
+  min-height: 100px;
   margin: 0;
   color: var(--secondary-color);
   padding: 1rem 0;
@@ -162,7 +159,7 @@ p {
   color: var(--secondary-color);
   border-bottom: 1px solid var(--secondary-color);
   padding-top: 1.3rem;
-  width: fit-content;
+  width: max-content;
   transition: ease 0.1s;
   text-transform: uppercase;
 }
