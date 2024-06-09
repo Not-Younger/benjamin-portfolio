@@ -128,7 +128,6 @@ p {
   display: flex;
   flex-direction: column;
   padding: 0 2.5rem;
-  width: 100%;
 }
 
 #location {
