@@ -1,83 +1,96 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Home</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  <div id="left">
-    <div id="nav-left">
-      <div id="nav-top">
-        <a id="name" href="./index.html">Benjamin<br>Young</a>
-        <ul id="links">
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./photo.html">Photo</a></li>
-          <li><a href="./video.html">Video</a></li>
-          <li><a href="./realestate.html">Real Estate</a></li>
-        </ul>
-      </div>
-      <a id="nav-contact" href="#">Contact</a>
-    </div>
-  </div>
-  <div id="right-left">
-  </div>
-  <div id="right">
-    <div id="hero">
-      <div id="hero-container">
-        <div id="hero-card">
-          <p id="location">📍 Boston, Massachusetts</p>
-          <h1 id="h1-hero">
-            <span id="typed"></span>
-            <span class="typed-cursor"></span>
-          </h1>
-          <h2 id="h2-hero">Helping Businesses Grow In Today’s Digital-Led World.</h2>
-          <a id="learn" href="">Learn More</a>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <nav id="nav">
+      <div id="nav-outer-container">
+        <div id="nav-inner-container">
+          <h1><a>Benjamin Young</a></h1>
+          <ul>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./photo.html">Photo</a></li>
+            <li><a href="./video.html">Video</a></li>
+            <li><a href="./realestate.html">Real Estate</a></li>
+          </ul>
         </div>
+        <a id="nav-contact" class="contact" href="">Contact</a>
       </div>
-    </div>
-    <div class="text">
-      <p>From animated corporate social graphics to cinematic wedding films, check out some of my engaging content I have created throughout the years.</p>
-    </div>
-    <div id="content">
-      <div class="grid">
-        <div id="me" style="background-color: red"></div>
-        <div style="background-color: orange"></div>
-        <div style="background-color: yellow"></div>
+    </nav>
+
+    <!-- Main Content -->
+    <section>
+      <div id="left-hidden"></div>
+      <div id="right-content">
+        <div id="hero">
+          <div id="hero-card">
+            <p>📍 Boston, Massachusetts</p>
+            <h1 id="hero-h1">
+              <span id="typed"><span class="typed-cursor"></span></span>
+            </h1>
+            <h2>Helping Businesses Grow In Today’s Digital-Led World.</h2>
+            <a id="learn-more" href="">Learn More</a>
+          </div>
+        </div>
+        <div class="text">
+          <p>From animated corporate social graphics to cinematic wedding films, check out some of my engaging content I have created throughout the years.</p>
+        </div>
+        <div id="intro">
+          <!-- TODO -->
+          <div class="picture-content">
+            <img src="static/me.jpg" alt="">
+            <div class="content">
+              <h2>Benjamin Young</h2>
+              <p>28 year old videographer, designer, photographer and web developer with 8+ years of professional experience.</p>
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <p>28 year old videographer, designer, photographer and web developer with 8+ years of professional experience.</p>
+        </div>
+        <footer>
+          <div id="footer-content">
+            <h2>Let's make something awesome together.</h2>
+            <a id="footer-contact" class="contact" href="">Contact</a>
+            <div id="copyright">
+              <p>Copyright - © Benjamin Young <span id="year"></span></p>
+              <p>Developed by <a target="_blank" href="https://www.jonathanyoung.dev/">Jonathan Young</a></p>
+            </div>
+          </div>
+        </footer>
       </div>
-    </div>
-    <div class="text">
-      <p>28 year old videographer, designer, photographer and web developer with 8+ years of professional experience.</p>
-    </div>
-    <footer>
-      <div class="footer-container">
-        <h2>Let's make something awesome together.</h2>
-        <a id="contact" href="">Contact</a>
-        <p>Copyright - © Benjamin Young <span id="year"></span></p>
-        <p>Developed by <a target="_blank" href="https://www.jonathanyoung.dev/">Jonathan Young</a></p>
-      </div>
-    </footer>
-    <div id="menu">
+    </section>
+
+    <!-- Mobile Nav Menu -->
+    <div id="mobile-nav" style="display: none">
       <ul>
-        <li><a href="./index.html">Home</a></li>
+        <li><a>Home</a></li>
         <li><a href="./about.html">About</a></li>
         <li><a href="./photo.html">Photo</a></li>
         <li><a href="./video.html">Video</a></li>
         <li><a href="./realestate.html">Real Estate</a></li>
       </ul>
     </div>
-    <div id="menu-container">
+
+    <!-- Mobile Nav Button -->
+    <div id="mobile-nav-btn-container">
       <a id="menu-btn">
-        <div id="icon" class="ic">
-          <div class="bar1 bar"></div>
-          <div class="bar2 bar"></div>
-          <div class="bar3 bar"></div>
+        <div id="icon">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+          <div class="bar barx1" style="display: none"></div>
+          <div class="bar barx2" style="display: none"></div>
         </div>
       </a>
     </div>
-  </div>
-  <div id="circle"></div>
-
-  <script src="./index.js">
-  </script>
-</body>
+    <!-- Circle Cursor -->
+    <div id="circle"></div>
+    <script src="./index.js">
+    </script>
+  </body>
 </html>

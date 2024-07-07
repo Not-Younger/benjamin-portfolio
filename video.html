@@ -2,88 +2,87 @@
 <html>
   <head>
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
   </head>
   <body>
-    <div id="left">
-      <div id="nav-left">
-        <div id="nav-top">
-          <a id="name" href="./index.html">Benjamin<br />Young</a>
-          <ul id="links">
+    <nav id="nav">
+      <div id="nav-outer-container">
+        <div id="nav-inner-container">
+          <h1><a href="./index.html">Benjamin Young</a></h1>
+          <ul>
             <li><a href="./about.html">About</a></li>
             <li><a href="./photo.html">Photo</a></li>
-            <li><a href="#">Video</a></li>
+            <li><a>Video</a></li>
             <li><a href="./realestate.html">Real Estate</a></li>
           </ul>
         </div>
-        <a id="nav-contact" href="#">Contact</a>
+        <a id="nav-contact" class="contact" href="">Contact</a>
       </div>
-    </div>
-    <div id="right-left"></div>
-    <div id="right-article">
-      <div id="about">
-        <div class="article">
-          <span id="video-b" class="backdrop">VIDEO</span>
-          <h1 class="title">Video</h1>
-          <p>
-            Videography is a powerful medium to connect with your audience. It
-            can be used for corporate videography, event videography, and
-            creating social media ads that perform better than the
-            competition’s.
-          </p>
-          <p>
-            Whether you’re looking to increase your social presence with social
-            media ads that perform better, or you’re looking for a way to
-            showcase your brand at a corporate event, we can help! With over 5
-            years in the professional videography business, we have the
-            experience and expertise you need to get the results you want.
-          </p>
-          <div id="videos">
-            <div class="video"></div>
-            <div class="video"></div>
-            <div class="video"></div>
-            <div class="video"></div>
-            <div class="video"></div>
-            <div class="video"></div>
-            <div class="video"></div>
-            <div class="video"></div>
-          </div>
-        </div>
-      </div>
-      <footer>
-        <div class="footer-container">
-          <h2>Let's make something awesome together.</h2>
-          <a id="contact" href="">Contact</a>
-          <p>Copyright - © Benjamin Young <span id="year"></span></p>
-          <p>
-            Developed by
-            <a target="_blank" href="https://www.jonathanyoung.dev/"
-              >Jonathan Young</a
-            >
-          </p>
-        </div>
-      </footer>
-      <div id="menu">
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./photo.html">Photo</a></li>
-          <li><a href="./video.html">Video</a></li>
-          <li><a href="./realestate.html">Real Estate</a></li>
-        </ul>
-      </div>
-      <div id="menu-container">
-        <a id="menu-btn">
-          <div id="icon" class="ic">
-            <div class="bar1 bar"></div>
-            <div class="bar2 bar"></div>
-            <div class="bar3 bar"></div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div id="circle"></div>
+    </nav>
 
-    <script src="./index.js"></script>
+    <!-- Main Content -->
+    <section>
+      <div id="left-hidden"></div>
+      <div id="right-content">
+        <div class="page">
+          <span class="backdrop">VIDEO</span>
+          <h1>Video</h1>
+          <p>Videography is a powerful medium to connect with your audience. It can be used for corporate videography, event videography, and creating social media ads that perform better than the competition’s.</p>
+          <p>Whether you’re looking to increase your social presence with social media ads that perform better, or you’re looking for a way to showcase your brand at a corporate event, we can help! With over 5 years in the professional videography business, we have the experience and expertise you need to get the results you want.</p>
+        </div>
+        <div id="videos">
+          <video width="100%" height="auto" controls>
+            <source src="./static/realestate.m4v" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <video width="100%" height="auto" controls>
+            <source src="./static/cars.m4v" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <video width="100%" height="auto" controls>
+            <source src="./static/realestate1.m4v" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <footer>
+          <div id="footer-content">
+            <h2>Let's make something awesome together.</h2>
+            <a id="footer-contact" class="contact" href="">Contact</a>
+            <div id="copyright">
+              <p>Copyright - © Benjamin Young <span id="year"></span></p>
+              <p>Developed by <a target="_blank" href="https://www.jonathanyoung.dev/">Jonathan Young</a></p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <!-- Mobile Nav Menu -->
+    <div id="mobile-nav" style="display: none">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./photo.html">Photo</a></li>
+        <li><a>Video</a></li>
+        <li><a href="./realestate.html">Real Estate</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile Nav Button -->
+    <div id="mobile-nav-btn-container">
+      <a id="menu-btn">
+        <div id="icon">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+        </div>
+      </a>
+    </div>
+    <!-- Circle Cursor -->
+    <div id="circle"></div>
+    <script src="./index.js">
+    </script>
   </body>
 </html>

@@ -2,99 +2,85 @@
 <html>
   <head>
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
   </head>
   <body>
-    <div id="left">
-      <div id="nav-left">
-        <div id="nav-top">
-          <a id="name" href="./index.html">Benjamin<br />Young</a>
-          <ul id="links">
-            <li><a href="#">About</a></li>
+    <nav id="nav">
+      <div id="nav-outer-container">
+        <div id="nav-inner-container">
+          <h1><a href="./index.html">Benjamin Young</a></h1>
+          <ul>
+            <li><a href="./about.html">About</a></li>
             <li><a href="./photo.html">Photo</a></li>
             <li><a href="./video.html">Video</a></li>
             <li><a href="./realestate.html">Real Estate</a></li>
           </ul>
         </div>
-        <a id="nav-contact" href="#">Contact</a>
+        <a id="nav-contact" class="contact" href="">Contact</a>
       </div>
-    </div>
-    <div id="right-left"></div>
-    <div id="right-article">
-      <div id="about">
-        <div class="article">
-          <span id="about-b" class="backdrop">ABOUT</span>
-          <h1 class="title">About</h1>
-          <div id="top-section">
-            <div id="info">
-              <h2>Hey! I'm Benjamin.</h2>
-              <p>
-                A 27-year-old creative producer located in sunny Florida 🌞.
-              </p>
-              <p>
-                You might be asking, “What exactly is a creative producer“?!
-              </p>
-              <p>
-                Well, I have a lot of neat talents! I’m great at videography,
-                graphic design, motion graphics, photography and web
-                development! I’ve also dabbled in a few other things like 3D
-                animation and augmented reality stuff. When it comes to anything
-                involving technology, it has my full attention.
-              </p>
-            </div>
-            <!-- add picture of benji -->
-            <div id="me2">
-            </div>
-          </div>
-          <p>
-            I’ve been doing all of these things professionally for about 8 years
-            but have been working on my skills since the day I first touched a
-            graphic design software, which was when I was about 9 years old.
-          </p>
-          <p>
-            I have a passion to produce quality content that is engaging and can
-            tell a story. I love to try new things and learn as much as I
-            possibly can.
-          </p>
-          <div class="wrapper">
-            <a id="resume" href="">View Resume</a>
-          </div>
-        </div>
-      </div>
-      <footer>
-        <div class="footer-container">
-          <h2>Let's make something awesome together.</h2>
-          <a id="contact" href="">Contact</a>
-          <p>Copyright - © Benjamin Young <span id="year"></span></p>
-          <p>
-            Developed by
-            <a target="_blank" href="https://www.jonathanyoung.dev/"
-              >Jonathan Young</a
-            >
-          </p>
-        </div>
-      </footer>
-      <div id="menu">
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./photo.html">Photo</a></li>
-          <li><a href="./video.html">Video</a></li>
-          <li><a href="./realestate.html">Real Estate</a></li>
-        </ul>
-      </div>
-      <div id="menu-container">
-        <a id="menu-btn">
-          <div id="icon" class="ic">
-            <div class="bar1 bar"></div>
-            <div class="bar2 bar"></div>
-            <div class="bar3 bar"></div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div id="circle"></div>
+    </nav>
 
-    <script src="./index.js"></script>
+    <!-- Main Content -->
+    <section>
+      <div id="left-hidden"></div>
+      <div id="right-content">
+        <div class="page">
+          <span class="backdrop">ABOUT</span>
+          <h1>About</h1>
+          <div id="about-top">
+            <div>
+              <h2>Hey! I'm Benjamin.</h2>
+              <p>A 27-year-old creative producer located in sunny Florida 🌞.</p>
+              <p>You might be asking, “What exactly is a creative producer“?!</p>
+              <p>Well, I have a lot of neat talents! I’m great at videography, graphic design, motion graphics, photography and web development! I’ve also dabbled in a few other things like 3D animation and augmented reality stuff. When it comes to anything involving technology, it has my full attention.</p>
+            </div>
+            <img src="static/me2.jpg" alt="">
+          </div>
+          <div id="about-bottom">
+            <p>I’ve been doing all of these things professionally for about 8 years but have been working on my skills since the day I first touched a graphic design software, which was when I was about 9 years old.</p>
+            <p>I have a passion to produce quality content that is engaging and can tell a story. I love to try new things and learn as much as I possibly can.</p>
+          </div>
+          <a class="contact" href="">View Resume</a>
+        </div>
+        <footer>
+          <div id="footer-content">
+            <h2>Let's make something awesome together.</h2>
+            <a id="footer-contact" class="contact" href="">Contact</a>
+            <div id="copyright">
+              <p>Copyright - © Benjamin Young <span id="year"></span></p>
+              <p>Developed by <a target="_blank" href="https://www.jonathanyoung.dev/">Jonathan Young</a></p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <!-- Mobile Nav Menu -->
+    <div id="mobile-nav" style="display: none">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./photo.html">Photo</a></li>
+        <li><a href="./video.html">Video</a></li>
+        <li><a href="./realestate.html">Real Estate</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile Nav Button -->
+    <div id="mobile-nav-btn-container">
+      <a id="menu-btn">
+        <div id="icon">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+        </div>
+      </a>
+    </div>
+    <!-- Circle Cursor -->
+    <div id="circle"></div>
+    <script src="./index.js">
+    </script>
   </body>
 </html>
