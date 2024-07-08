@@ -174,7 +174,7 @@ ul {
 #mobile-nav-btn-container {
   position: fixed;
   display: none;
-  bottom: 0;
+  top: 0;
   width: 100vw;
   justify-content: right;
 }
@@ -235,23 +235,23 @@ ul {
 @keyframes rise {
   0% {
     transform: scaleY(0) scaleX(0);
-    transform-origin: bottom right;
+    transform-origin: top right;
   }
   100% {
     transform: scaleY(1) scaleX(1);
-    transform-origin: bottom right;
+    transform-origin: top right;
   }
 }
 
 @keyframes lower {
   0% {
     transform: scaleY(1) scaleX(1);
-    transform-origin: bottom right;
+    transform-origin: top right;
     display: flex;
   }
   100% {
     transform: scaleY(0) scaleX(0);
-    transform-origin: bottom right;
+    transform-origin: top right;
   }
 }
 
@@ -288,7 +288,6 @@ section {
 #hero-h1 {
   display: flex;
   color: var(--main-color);
-
   font-size: 5rem;
   text-align: center;
   margin: 0;
