@@ -329,7 +329,8 @@ section {
 }
 
 #hero h2 {
-  margin: 1rem 0;
+  font-size: 2rem;
+  margin: 0.25rem 0;
 }
 
 #learn-more {
@@ -351,7 +352,8 @@ section {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  font-weight: 700;
+  line-height: 2.5rem;
+  font-weight: 700
 }
 
 .text p {
